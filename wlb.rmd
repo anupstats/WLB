@@ -1,8 +1,8 @@
 ---
-title: "wlb"
+title: "Work Life Balance: Intramural Project"
 author: "Anup"
 date: "06/10/2021"
-output: word_document
+output: html_document
 ---
 
 ```{r include=FALSE}
