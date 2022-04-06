@@ -1,0 +1,94 @@
+---
+title: "wlb"
+author: "Anup"
+date: "06/10/2021"
+output: word_document
+---
+
+```{r include=FALSE}
+library(readxl)
+library(haven)
+library(finalfit)
+library(dplyr)
+library(ggplot2)
+library(likert)
+library(patchwork)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(tidytext)
+```
+
+```{r include=FALSE}
+data <- read_sav("WLB_final.sav")
+#glimpse(data)
+library(labelled)
+data <-  data %>% unlabelled()
+#data11 <- data[,c(17:26,51)]
+#data12 <- data[,27:33]
+#data13 <- data[,c(34:36,51,50,52)]
+#data14 <- data[,c(37,38,45:48)]
+#data15 <- data[,c(52:56,39:44)]
+#data11[sapply(data11, is.character)] <- lapply(data11[sapply(data11, is.character)], as.factor)
+#data11[sapply(data11, is.factor)] <- lapply(data11[sapply(data11, is.factor)], as.ordered)
+
+```
+
+```{r echo=FALSE}
+data11 <- data[,c(17:26,51)]
+
+#data11[sapply(data11, is.character)] <- lapply(data11[sapply(data11, is.character)], as.factor)
+#data11[sapply(data11, is.factor)] <- lapply(data11[sapply(data11, is.factor)], as.ordered)
+
+data11 <-  as.data.frame(data11)
+names(data11) = c("Interest Job","Workplace Location","Friendly Environment","Job Security","Training Opportunities","Career development",
+"Salary Wages","Working Flexible","Leave","Holidays","Away Home" )
+
+result_wps <- likert(data11, grouping = data$Working_as)
+plot_wps <- plot(result_wps, centered=TRUE, type = "bar", legend = "") + labs(title = "Work Place Satisfaction", y = "Percent")
+
+plot_wps
+
+# for sector
+result_wps_sector<-likert(data11, grouping = data$Working_as)
+
+plot_wps_sector = plot(result_wps_sector , centered=TRUE, type = "bar", legend = "", text.size = 3) + labs(title = "Work Place Satisfaction", x= "Working Sector")
+plot_wps_sector
+
+##
+data12 <- data[,27:33]
+data12 <-  as.data.frame(data12)
+names(data12) = c("Ability Untilization","Coworkers","Supervisor","Working Conditions","Medical Facilities","Work Autonomy","Employe Welfare" )
+
+result_wpfs <- likert(data12)
+plot_wpfs <- plot(result_wpfs, centered=TRUE, type = "bar", legend = "") + labs(title = "Work Place Facilities Satisfaction", y = "Percent")
+
+plot_wpfs
+
+data13 <- data[,c(34:36,50,52)]
+data13 <-  as.data.frame(data13)
+names(data13) = c("Emotional Exhaustion","Prolonged Fatigue level","Additional Burdens","Energy","Work Place Problem" )
+
+
+
+
+result_obwp <- likert(data13)
+plot_obwp  <- plot(result_obwp , centered=TRUE, type = "bar", legend = "") + labs(title = "Over Burden at Work Place", y = "Percent")
+plot_obwp
+
+data14 <- data[,c(37,38,45:48)]
+data14 <-  as.data.frame(data14)
+names(data14) = c("Family worries","Family Activities","Family Obilgactions","Family Matters","Quality Family Time","Family Holiday" )
+
+result_FE <- likert(data14)
+plot_FE   <- plot(result_FE  , centered=TRUE, type = "bar", legend = "") + labs(title = "Family Environment", y = "Percent")
+plot_FE
+
+data15 <- data[,c(53:56,39:44)]
+data15 <-  as.data.frame(data15)
+names(data15) = c("Sense of Pride","Social Status","Policy & Practices","Accomplishment","Self Evelopment","Moral value","Family Commitments","Social Involvement","Quality LIfe","Care Myself" )
+
+result_Ss <- likert(data15)
+plot_Ss   <- plot(result_Ss  , centered=TRUE, type = "bar", legend = "") + labs(title = "Social Status", y = "Percent")
+plot_Ss
+```
