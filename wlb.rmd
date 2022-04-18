@@ -3,6 +3,9 @@ title: "Work Life Balance: Intramural Project"
 author: "Anup"
 date: "06/10/2021"
 output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r include=FALSE}
@@ -19,6 +22,152 @@ library(tidyverse)
 library(tidytext)
 ```
 
+### MOTIVATION OF THE STUDY
+
+Health makes an important contribution to economic progress, as healthy
+population live longer, is more productive, and save more. This has huge
+human and economic costs: India is losing more than six percent of its
+GDP annually due to premature deaths and preventable illnesses (WHO,
+2013). The Indian Health Care sector is prominently the largest and
+fastest growing sector in the country and it comprises of Hospital
+(71%)\*, Pharmaceutical (13%), Diagnosis (3%), Medical equipments and
+supplies (9%) and medical insurance (4%). In India, as per information
+provided by Medical Council of India (MCI) and Indian Nursing Council,
+there are 9,38,861 Doctors, 7,86,061 ANMs and 17,80,006 Nurses &
+Midwives registered in the country. The shortage of qualified medical
+professionals is one of the key challenges the Indian healthcare
+industry is facing (Source: WHO, IMH, Deloitte, Tech Sci. Research). The
+health care sector totally relies in the hand of health care providers
+and undoubtedly, doctors and nurses are the dominant personnel in health
+care. Job stress among healthcare staff is becoming a common occurrence
+in most public health services (Winstanley and Whittington, 2002).
+
+The daily work of physicians and nurses in the hospital setting is
+inherently stressful (Firth-Cozens, 2003; Lee & Wang, 2002; Thomas,
+2004). Long workdays, excess case loads, time pressure, poor sleep
+habit, and high performance expectation contribute to the
+well-documented rates of burnout, depression, job dissatisfaction, and
+workplace fatigue among nurses and physicians (Clever,2002; Geurts,
+Rutte, & Peeters, 1999; Hillhouse & Adler, 1997; Imai, Nakao, Tsuchiya,
+Kuroda, & Katoh, 2004; Papp, Stoller, Sage, Aikens, Owens, Avidan et
+al., 2004; Rose, Ware, Kolm, & Risser, 2000; Shanafelt, Bradley, Wipf, &
+Back, 2002). The consequences of these characteristics may include
+decreased patient satisfaction, diminished care quality, and increased
+rate of medical errors (DiMatteo, Sherbourne, Hays, Ordway, Kravitz,
+McGlynn et al., 1993; Fletcher, Davis, Underwood, Mangrulkar, McMahon, &
+Saint, 2004 Grol, Mokkink, Smits, van Eijk, Beek, Mesker et al., 1985;
+Tarnow- Mordi, Hau, Warden, & Shearer, 2000; Weinger & Ebden, 2002).
+Medical practitioners experience appreciable stress (Burke and
+Richardson, 1991), comparatively high suicide rates (Gestal, 1987), and
+varying degree of morbidity and early retirement (Mc Namee, Keen,
+Corkill, 1987). The main sources of stress that have been identified
+are: problems with practice administration, interruptions, patient's
+expectations and demands, emergencies, heavy workload, constant time
+pressure and work/home conflict (Cooper et al., 1989; Howie et al.,
+1989; Morrell et al., 1986; Porter et al., 1985; Richardson & Burke,
+1991). Health Care Personnel are often stressed with their own work
+which some where affects their family life in an adverse manner.
+According to "The Ottawa Citizen, 2008", in about 2,800 medical students
+and 730 second-year residents, about 93 per cent of students and 88 per
+cent of residents said the work-life balance was an important part of
+achieving a satisfying and successful medical practice. In the second
+study, the Australian Medical Association (2008) revealed that 81 per
+cent of hospital doctors surveyed want flexible working arrangements to
+allow them to spend more time with family and to continue further formal
+training. Hence, the concept of work-life balance is going to be very
+appropriate for the healthcare professionals who are tend to work 24\*7
+and involve a lot strain and stress.
+
+## Research Gap
+
+After literature review it was found that there are many studies
+conducted in various fields and disciplines but there is a huge research
+gap on the study of work-life balance in health care sector in Indian
+perspective. Few studies has been carried out on this issue in Indian
+Health Care Sector, either focusing on nurses or doctors but not both
+together. Hence, this is the peak time to take an in depth understanding
+on these issues which are not only desirable but also necessary. The
+present research tries to find out causes of imbalances among doctors
+and nurses. The results of the present study would be very useful to
+government and health care sector to understand the causes of distress
+and imbalance among the health care personnel and to make policies and
+strategies so that they can work with making an optimum blend of work
+and non-work domain, so that none of the domain prevails over the other.
+
+## A Conceptual Framework of Work-Life Balance
+
+"Work" and "Life" have been defined differently in literature
+(Guest,2002), where work is paid employment and life is everything
+outside of the formal employment but is usually used to connate the
+sphere of family or home life (Ransome,2007). WLB is defined as
+"satisfaction and good functioning at work and at home with a minimum of
+role conflict" (Clark, 2000). WLB is defined as "the absence of
+unacceptable level of conflicts between work and non-work demands.
+(Greenbatt,2002) Work life balance as "the extent to which an individual
+is equally engaged in -- and equally satisfied with -- his or her work
+role and family role" (Greenhaus et al, 2003). Work life balance is "the
+extent to which an individual's effectiveness and satisfaction in work
+and family roles are compatible with the individual's life priorities.
+(Greenhaus and Allen, 2006) Work--family balance is defined "as
+accomplishment of role related expectations that are negotiated and
+shared between an individual and his or her role-related partners in the
+work and family domains" (Grzywacz and Carlson, 2007). WLB for any
+person is having the "right" combination of participation in paid work
+(defined by hours and working conditions) and other aspects of lives.
+This combination will change as people move through life and have
+changing responsibilities and commitments in their work and personal
+lives. Frone, Russell, & Cooper, (1992). With these definitions it is
+clear that any imbalance that is formed either creates more pressure or
+psychological involvement or satisfaction towards one role as compared
+to other role. The origin of the research work life balance can be seen
+from the seminal work of rapport and rapport (1969), the research are
+been that both work and family needs time and energy. Work is an
+important source of income, financial stability and status. As work and
+family has no direct relationship with each other so conflicts is
+inevitable to arise. Khan wolf, Quinn, snoek and Rosenthal, (1964) from
+their seminal studies associated work life balance with role theory,
+that is conflicting expectations associated with different roles which
+the male and female has to play in their day to day life. Kanter (1977)
+was able to continue the research of Khan (1964) proving that work and
+family are not independent of each other rather have an interlink which
+consequently brings in conflicts between the two. With the pioneering
+work of Pleck (1977) there was a general consensus formed that work and
+family affect each other either in a positive or negative way. And there
+are various extraneous variables like time, task, attitudes, stress
+emotions, and behaviors which have an influence over work life
+imbalance.
+
+    Carlson and Frone (2003) discussed about the psychological involvement of the person in the organization as well as on the family front. A high degree of psychological involvement with context to role of an individual i.e. job role and family role would prioritize the individual to be somewhat mentally preoccupied with their performance in that role, such imbalance in performance will have significant implications on work to family and family to work interference. Conceptually, it seems evident that psychological involvement would have significant implications for levels of work to family and family to work interference. Carlson and Frone (2003) found that both psychological involvement and behavioral (time) involvement were significant related to WIF but the reverse did not apply with FIW or family involvement into work. Clearly more research and dynamic interplay in relationship of time and family was required to draw conclusions. Therefore, Frone (2003) summarized the findings from US based survey and noted that family boundaries may be more permeable than job boundaries and hence the levels of work to family (WFI) interference are reported higher or more intense than those of family to work interference (FWI).
+
+### OBJECTIVES OF THE STUDY
+
+The objectives framed for the study are as follows: 1. To explore the
+variations in work-life balance indicators in the Indian and Global
+context; 2. To identify the important variables related to work-life
+balance in Health Care Sector (Hospitals); 3. To measure the dependency
+of work-family conflict and family-work conflict on control variables;
+4. To examine the existing work-life balance variables among doctors and
+nurses; and 5. To assess the impact of work-life balance variables on
+job satisfaction, employee well- being and stress control.
+
+### HYPOTHESES FORMULATION
+
+On the basis of literature review and above objectives the following
+hypotheses are laid down: H01: There is no variation in work-life
+balance variables in the Indian and Global context. H02: There is no
+dependency of work-family conflict and family-work conflict on control
+variables; H03: There is no significant relationship of work-life
+balance variables among doctors and nurses; and H04: Work-Life Balance
+variables do not significantly impact the job satisfaction, employee
+well-being and stress control. 4. Proposed Research Model\
+The present model comprises of four aspects i.e., Work-Life Balance
+Variables, Control Variables, Conflict Measurement and Outcome
+Variables. The proposed research model depicts the dependency of
+work-family conflict and family-work conflict on control variables, the
+existing work-life balance variables among doctors and nurses and the
+impact of work-life balance variables on job satisfaction, employee
+well-being and stress control.
+
 ```{r include=FALSE}
 data <- read_sav("WLB_final.sav")
 #glimpse(data)
@@ -29,12 +178,12 @@ data <-  data %>% unlabelled()
 #data13 <- data[,c(34:36,51,50,52)]
 #data14 <- data[,c(37,38,45:48)]
 #data15 <- data[,c(52:56,39:44)]
-#data11[sapply(data11, is.character)] <- lapply(data11[sapply(data11, is.character)], as.factor)
+#data11[sapply(data11, is.character)] <- lapply (data11[sapply (data11, is.character)], as.factor)
 #data11[sapply(data11, is.factor)] <- lapply(data11[sapply(data11, is.factor)], as.ordered)
 
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.height=10, fig.width=10}
 data11 <- data[,c(17:26,51)]
 
 #data11[sapply(data11, is.character)] <- lapply(data11[sapply(data11, is.character)], as.factor)
@@ -44,7 +193,7 @@ data11 <-  as.data.frame(data11)
 names(data11) = c("Interest Job","Workplace Location","Friendly Environment","Job Security","Training Opportunities","Career development",
 "Salary Wages","Working Flexible","Leave","Holidays","Away Home" )
 
-result_wps <- likert(data11, grouping = data$Working_as)
+result_wps <- likert(data11, grouping = data$Gender)
 plot_wps <- plot(result_wps, centered=TRUE, type = "bar", legend = "") + labs(title = "Work Place Satisfaction", y = "Percent")
 
 plot_wps
@@ -79,6 +228,7 @@ plot_obwp
 data14 <- data[,c(37,38,45:48)]
 data14 <-  as.data.frame(data14)
 names(data14) = c("Family worries","Family Activities","Family Obilgactions","Family Matters","Quality Family Time","Family Holiday" )
+
 
 result_FE <- likert(data14)
 plot_FE   <- plot(result_FE  , centered=TRUE, type = "bar", legend = "") + labs(title = "Family Environment", y = "Percent")
