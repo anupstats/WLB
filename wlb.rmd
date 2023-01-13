@@ -1,5 +1,5 @@
 ---
-title: "Work Life Balance: Intramural Project"
+title: "Work Life Balance"
 author: "Anup"
 date: "06/10/2021"
 output: html_document
