@@ -22,7 +22,7 @@ library(tidyverse)
 library(tidytext)
 ```
 
-### MOTIVATION OF THE STUDY
+### Motivation of the Study
 
 Health makes an important contribution to economic progress, as healthy
 population live longer, is more productive, and save more. This has huge
